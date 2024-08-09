@@ -1,0 +1,107 @@
+La Programación Orientada a Objetos (POO) es un paradigma de programación que 
+se basa en el concepto de "objetos", que son instancias de "clases". 
+Este enfoque permite organizar el código de una manera que refleja mejor la 
+estructura y el comportamiento de los objetos en el mundo real, facilitando la 
+reutilización del código, la modularidad y el mantenimiento.
+
+### Conceptos Clave de la POO
+
+1. **Clase:**
+   Una clase es una plantilla o modelo que define las propiedades (atributos) 
+   y comportamientos (métodos) de los objetos. Es como un plano para crear objetos.
+
+   ```python
+   class Coche:
+       def __init__(self, marca, modelo):
+           self.marca = marca
+           self.modelo = modelo
+
+       def arrancar(self):
+           print(f"El coche {self.marca} {self.modelo} está arrancando.")
+   ```
+
+2. **Objeto:**
+   Un objeto es una instancia de una clase. Cada objeto tiene sus propios 
+   valores para los atributos definidos en la clase.
+
+   ```python
+   mi_coche = Coche("Toyota", "Corolla")
+   mi_coche.arrancar()  # Salida: El coche Toyota Corolla está arrancando.
+   ```
+
+3. **Encapsulamiento:**
+   El encapsulamiento se refiere a la ocultación de los detalles internos de un objeto y 
+   la exposición de una interfaz limitada para interactuar con él. Esto se logra usando 
+   modificadores de acceso como `public`, `private` y `protected` (
+    çaunque en Python, se usa `_` y `__` para indicar protección).
+
+   ```python
+   class CuentaBancaria:
+       def __init__(self, saldo):
+           self.__saldo = saldo
+
+       def depositar(self, cantidad):
+           self.__saldo += cantidad
+
+       def obtener_saldo(self):
+           return self.__saldo
+   ```
+
+4. **Herencia:**
+   La herencia permite que una clase (subclase) herede atributos y métodos de otra clase (superclase). Esto promueve la reutilización del código.
+
+   ```python
+   class Vehiculo:
+       def __init__(self, marca, modelo):
+           self.marca = marca
+           self.modelo = modelo
+
+       def arrancar(self):
+           print(f"El vehículo {self.marca} {self.modelo} está arrancando.")
+
+   class Moto(Vehiculo):
+       def hacer_caballito(self):
+           print(f"La moto {self.marca} {self.modelo} está haciendo un caballito.")
+   ```
+
+5. **Polimorfismo:**
+   El polimorfismo permite que objetos de diferentes clases sean tratados de manera uniforme a través de una interfaz común. Esto se logra mediante la sobrescritura de métodos.
+
+   ```python
+   class Animal:
+       def hacer_sonido(self):
+           pass
+
+   class Perro(Animal):
+       def hacer_sonido(self):
+           print("Guau")
+
+   class Gato(Animal):
+       def hacer_sonido(self):
+           print("Miau")
+
+   def reproducir_sonido(animal):
+       animal.hacer_sonido()
+
+   mi_perro = Perro()
+   mi_gato = Gato()
+
+   reproducir_sonido(mi_perro)  # Salida: Guau
+   reproducir_sonido(mi_gato)   # Salida: Miau
+   ```
+
+6. **Abstracción:**
+   La abstracción se refiere a la simplificación de sistemas complejos mediante la ocultación de detalles innecesarios y la exposición de funcionalidades esenciales.
+
+### Ventajas de la POO
+
+- **Modularidad:** El código se organiza en clases y objetos, facilitando la comprensión y el mantenimiento.
+- **Reutilización del código:** Las clases pueden reutilizarse en diferentes partes de un programa o en otros proyectos.
+- **Facilidad de mantenimiento:** Los cambios en el código son más fáciles de implementar sin afectar otras partes del programa.
+- **Flexibilidad y escalabilidad:** La herencia y el polimorfismo permiten la creación de sistemas flexibles y escalables.
+
+Para más información sobre la Programación Orientada a Objetos en Python, puedes visitar la [documentación oficial de Python](https://docs.python.org/3/tutorial/classes.html).
+
+No olvides visitar nuestra página web para más detalles y recursos: [GPT Online](https://gptonline.ai/es/).
+
+Además, te invitamos a explorar nuestra sección de [Dibujos Para Colorear](https://www.google.es/search?q=colorearw).
