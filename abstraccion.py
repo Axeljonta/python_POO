@@ -1,4 +1,3 @@
-# Definimos la clase abstracta Auto
 class Auto(ABC):
     def __init__(self):
         self._estado = 'apagado'
